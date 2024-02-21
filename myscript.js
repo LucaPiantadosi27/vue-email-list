@@ -6,13 +6,14 @@
 
 
 
-const { createApp } = Vue;
 
-// Creo un'applicazione Vue utilizzando "createApp"che genera un indirizzo email casualmente tramite una richiesta API. 
+
+const { createApp } = Vue;
+//creo un 'applicazione Vueutilizzando "createApp"che genera un indirizzo email casuale
 const generator = createApp({
     data() {
         return {
-            title: 'Random Mail Generator:',
+            title: 'Random Mail Generator',
             mailList: [],
             requiredMails: 10,
 
@@ -20,15 +21,17 @@ const generator = createApp({
     },
 
     methods: {},
-
+    
     // effettuo una richiesta HTTP GET utilizzando Axios
     mounted() {
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
+        // uso un for per generare più mail
+        for (let i = 0; i < this.requiredMails; i++) {
 
-         // la richiesta ha successo, viene ricevuta la risposta e viene recuperato l'indirizzo email   
-        const mail = response.data.response; 
-            this.mailList.push(mail);
-        })
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
+                const mail = response.data.response;
+                this.mailList.push(mail);
+            });
+        }
     },
 
 });
