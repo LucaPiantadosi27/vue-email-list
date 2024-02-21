@@ -19,13 +19,18 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="generator">
         <div class="container">
-            <h1 class="my-4">Titl</h1>
-            <code class="fs-2" id="result">Exmpl</code>
+            <h1>{{title}}</h1>
+            <ul>
+                <!-- mail List -->
+                <li v-for='mail in mailList'>{{mail}}</li>
+            </ul>
+
         </div>
 
     </div>
+
 
 
 
