@@ -1,0 +1,19 @@
+h1{
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: brown;
+    
+}
+.container{
+    font-family: sans-serif;
+    font-style: oblique;
+
+    background-color: bisque;
+    width: 450px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 15px;
+    border: solid rgba(128, 128, 128, 0.678);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    
+}
